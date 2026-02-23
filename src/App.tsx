@@ -734,6 +734,13 @@ export default function App() {
                 </h2>
               </div>
 
+              {/* Text Content */}
+              <div className="space-y-6 text-lg leading-relaxed text-zinc-300">
+                {activeLesson.content.map((paragraph, idx) => (
+                  <p key={idx}>{paragraph}</p>
+                ))}
+              </div>
+
               {/* Visual Aids */}
               {activeLesson.visualType && (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -756,13 +763,6 @@ export default function App() {
                   )}
                 </div>
               )}
-
-              {/* Text Content */}
-              <div className="space-y-6 text-lg leading-relaxed text-zinc-300">
-                {activeLesson.content.map((paragraph, idx) => (
-                  <p key={idx}>{paragraph}</p>
-                ))}
-              </div>
 
               {/* Tips & Warnings */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
